@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/tools"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp"
+    android:layout_weight="1"
+    card_view:cardBackgroundColor="#BCDF98"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="2dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:foreground="@drawable/text_ripple"
+        />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="visible"
+        android:id="@+id/load_anim"
+        android:src="@drawable/progress_animation"
+        android:layout_centerInParent="true"/>
+
+
+        <LinearLayout
+            android:background="#121212"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vision_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerInParent="true"
+                android:text="Vision Name"
+                android:textColor="#43A047"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/vision_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerInParent="true"
+                android:text="Vision Name"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

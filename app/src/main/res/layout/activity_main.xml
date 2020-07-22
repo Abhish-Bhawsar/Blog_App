@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="#121212"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:background="@drawable/gradient">
+
+        <include
+            android:id="@+id/mtool_bar"
+            layout="@layout/app_bar_layout"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Small.Circle"
+            android:layout_centerInParent="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="visible"
+            app:SpinKit_Color="@color/greenTextAccent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/no_task"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/notask"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:text="No blogs to show"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu_labels_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="-2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:menu_shadowColor="#ffffff"
+            app:menu_shadowRadius="10dp"
+            app:menu_colorNormal="@color/greenTextAccent"
+            fab:menu_backgroundColor="#A8121212"
+            fab:menu_labels_ellipsize="end"
+            app:menu_labels_colorNormal="#121212"
+            app:menu_labels_textColor="#ffffff"
+            fab:menu_labels_singleLine="true"
+            app:menu_labels_colorRipple="#C4FFFFFF"
+            app:menu_colorPressed="#C4000000">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_add_vision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_latest"
+                app:fab_colorNormal="@color/greenTextAccent"
+                fab:fab_size="mini"
+                fab:fab_label="Add New Vision"
+                app:fab_colorPressed="#C4000000"
+                app:fab_shadowColor="#88FFFFFF"
+                app:fab_shadowRadius="5dp"/>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </RelativeLayout>
+
+</RelativeLayout>

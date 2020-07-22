@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginOptionActivity"
+    android:background="@color/mateBlackAccent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/aclonica"
+        android:text="Blog App"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/google_btn"
+        android:background="@drawable/button_designs"
+        android:text="Google Sign In"
+        android:layout_centerInParent="true"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_width="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/phone_btn"
+        android:layout_below="@+id/google_btn"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_designs"
+        android:text="Phone Login"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:layout_width="300dp"
+
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
